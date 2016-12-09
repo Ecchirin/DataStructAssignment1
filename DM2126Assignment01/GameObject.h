@@ -7,7 +7,7 @@
 class GameObject
 {
 public:
-	virtual ~GameObject();
+	virtual ~GameObject() = 0;
 
 	std::string getName(void);
 	static int getCount();
