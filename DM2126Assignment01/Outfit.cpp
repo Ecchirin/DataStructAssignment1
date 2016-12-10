@@ -7,7 +7,7 @@ Outfit::Outfit(const std::string& objName, const int& duraValue, const int& spec
 
 Outfit::~Outfit()
 {
-
+	std::cout << this->getName << " is deleted.\n";
 }
 
 const int Outfit::getSPECIAL()
