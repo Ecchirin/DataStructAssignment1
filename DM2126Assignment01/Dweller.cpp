@@ -109,7 +109,7 @@ void Dweller::receiveRadDamage(const int& radDamage)
 void Dweller::receiveEquipmentDamage(const int& eqDamage)
 {
 	outfit_->receiveDamage(eqDamage);
-	weapon_->receiveDamage((eqDamage / 2));
+	weapon_->receiveDamage(eqDamage);
 }
 
 void Dweller::addStimpak(const int& numStimpak)

@@ -9,6 +9,8 @@ public:
 	Outfit(const std::string&, const int&, const int&);
 	~Outfit();
 
+	void receiveDamage(const int & damage);
+
 	const int getSPECIAL();
 
 protected:

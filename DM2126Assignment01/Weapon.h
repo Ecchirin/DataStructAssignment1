@@ -9,6 +9,8 @@ public:
 	Weapon(const std::string&, const int&, const int&);
 	~Weapon();
 
+	void receiveDamage(const int & damage);
+
 	const int getAttackDmg();
 
 protected:
