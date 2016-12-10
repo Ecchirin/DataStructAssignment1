@@ -5,6 +5,11 @@ GameObject::GameObject(const std::string& objName) : kName(objName)
 	count_++;
 }
 
+GameObject::~GameObject()
+{
+	count_--;
+}
+
 std::string GameObject::getName()
 {
 	return kName;

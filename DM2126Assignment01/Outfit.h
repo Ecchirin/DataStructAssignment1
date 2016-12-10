@@ -12,6 +12,6 @@ public:
 	const int getSPECIAL();
 
 protected:
-	const int kSPECIAL();
+	const int kSPECIAL;
 };
 #endif // !OUTFIT_H
