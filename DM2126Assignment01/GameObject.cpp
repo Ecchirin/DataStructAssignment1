@@ -1,5 +1,7 @@
 #include "GameObject.h"
 
+int GameObject::count_ = 0;
+
 GameObject::GameObject(const std::string& objName) : kName(objName)
 {
 	count_++;

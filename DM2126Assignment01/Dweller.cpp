@@ -26,13 +26,13 @@ Dweller::~Dweller()
 	stimpak_ = 0;
 	radaway_ = 0;
 
-	delete outfit_;
-	delete weapon_;
+	outfit_ = NULL;
+	weapon_ = NULL;
 }
 
 const int Dweller::getSPECIAL()
 {
-	//todo add the names of the special values??
+
 	return SPECIAL_;
 }
 
@@ -108,8 +108,15 @@ void Dweller::receiveRadDamage(const int& radDamage)
 
 void Dweller::receiveEquipmentDamage(const int& eqDamage)
 {
-	outfit_->receiveDamage(eqDamage);
-	weapon_->receiveDamage(eqDamage);
+	if (outfit_ != NULL)
+	{
+		outfit_->receiveDamage(eqDamage);
+	}
+
+	if (weapon_ != NULL)
+	{
+		weapon_->receiveDamage(eqDamage);
+	}
 }
 
 void Dweller::addStimpak(const int& numStimpak)

@@ -8,7 +8,6 @@ Item::Item(const std::string& objName, const int& duraValue) : GameObject::GameO
 Item::~Item()
 {
 	durability_ = 0;
-	std::cout << this->getName() << " is deleted.\n";
 }
 
 const int Item::getDurability()

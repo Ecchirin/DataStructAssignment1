@@ -7,7 +7,7 @@ Weapon::Weapon(const std::string& objName, const int& duraValue, const int& wpnD
 
 Weapon::~Weapon()
 {
-	std::cout << this->getName() << " is deleted.\n";
+	
 }
 
 void Weapon::receiveDamage(const int &damage)
