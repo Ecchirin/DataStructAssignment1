@@ -32,19 +32,53 @@ Dweller::~Dweller()
 
 const int Dweller::getSPECIAL()
 {
+	if ((outfit_ != NULL) && (outfit_->getDurability() > 0))
+	{
+		int tempValue = 0;
+		int finaleValue = 0;
+		int outfitSpecial;
+		int dwellerSpecial;
 
-	return SPECIAL_;
+		for (outfitSpecial = outfit_->getSPECIAL(), dwellerSpecial = SPECIAL_; dwellerSpecial > 0; outfitSpecial /= 10, dwellerSpecial /= 10)
+		{
+			if (((outfitSpecial % 10) + (dwellerSpecial % 10)) >= 9)
+			{
+				tempValue += 9;
+			}
+			else
+			{
+				tempValue += ((outfitSpecial % 10) + (dwellerSpecial % 10));
+			}
+
+			tempValue *= 10;
+		}
+
+		for (int reverseTempValue = tempValue; reverseTempValue > 0; reverseTempValue /= 10)
+		{
+			finaleValue += (reverseTempValue % 10);
+
+			if ((reverseTempValue / 10) > 0)
+			{
+				finaleValue *= 10;
+			}
+		}
+		return finaleValue;
+	}
+	else
+	{
+		return SPECIAL_;
+	}
 }
 
 const int Dweller::getCurrentHealth()
 {
-	if ((health_ - radiation_) <= 0)
+	if ( ((100 - radiation_) <= 0) || (health_ <= 0) )
 	{
 		return 0;
 	}
 	else
 	{
-		return (health_ - radiation_);
+		return health_;
 	}
 }
 
@@ -103,6 +137,10 @@ void Dweller::receiveRadDamage(const int& radDamage)
 	else
 	{
 		radiation_ += radDamage;
+		if (health_ >= (100 - radiation_))
+		{
+			health_ = (100 - radiation_);
+		}
 	}
 }
 
@@ -131,7 +169,7 @@ void Dweller::addRadAway(const int& numRadAway)
 
 void Dweller::useStimpak()
 {
-	if (getCurrentHealth() < (100 - radiation_))
+	if ((getCurrentHealth() < (100 - radiation_)) && (stimpak_ > 0))
 	{
 		stimpak_--;
 		if ((health_ + 20) >= (100 - radiation_))
@@ -147,7 +185,7 @@ void Dweller::useStimpak()
 
 void Dweller::useRadAway()
 {
-	if (radiation_ > 0)
+	if ((radiation_ > 0) && (radaway_ > 0))
 	{
 		radaway_--;
 		if ((radiation_ - 10) <= 0)
