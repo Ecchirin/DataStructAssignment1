@@ -156,12 +156,16 @@ void Dweller::useRadAway()
 
 Outfit* Dweller::assignOutfit(Outfit *outfitPtr)
 {
+	outfit_ = outfitPtr;
 
+	return outfit_;
 }
 
 Weapon* Dweller::assignWeapon(Weapon *wpnPtr)
 {
+	weapon_ = wpnPtr;
 
+	return weapon_;
 }
 
 bool Dweller::isDead()
