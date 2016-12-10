@@ -166,7 +166,7 @@ Weapon* Dweller::assignWeapon(Weapon *wpnPtr)
 
 bool Dweller::isDead()
 {
-	if (getCurrentHealth == 0)
+	if (getCurrentHealth() == 0)
 	{
 		return true;
 	}

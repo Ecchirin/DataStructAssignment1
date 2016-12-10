@@ -7,7 +7,7 @@ Outfit::Outfit(const std::string& objName, const int& duraValue, const int& spec
 
 Outfit::~Outfit()
 {
-	std::cout << this->getName << " is deleted.\n";
+	std::cout << this->getName() << " is deleted.\n";
 }
 
 void Outfit::receiveDamage(const int &damage)
