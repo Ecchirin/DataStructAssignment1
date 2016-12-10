@@ -1,5 +1,5 @@
-#ifndef DWELLER_H
-#define DWELLER_H
+#ifndef ASSIGNMENT1_ROOT_DWELLER_H
+#define ASSIGNMENT1_ROOT_DWELLER_H
 
 #include "Vec2D.h"
 #include "Weapon.h"
@@ -8,7 +8,7 @@
 class Dweller : public GameObject
 {
 public:
-	Dweller(const std::string&, const int&);
+	Dweller(const std::string& dwellerName, const int& specialValue);
 	~Dweller();
 
 	const int getSPECIAL();
@@ -19,18 +19,18 @@ public:
 	void setPosition(const Vec2D&);
 	const Vec2D getPosition();
 
-	void receiveHealthDamage(const int&);
-	void receiveRadDamage(const int&);
-	void receiveEquipmentDamage(const int&);
+	void receiveHealthDamage(const int& hpDamage);
+	void receiveRadDamage(const int& radDamage);
+	void receiveEquipmentDamage(const int& eqDamage);
 	
-	void addStimpak(const int&);
-	void addRadAway(const int&);
+	void addStimpak(const int& numStimpak);
+	void addRadAway(const int& numRadAway);
 
 	void useStimpak();
 	void useRadAway();
 
-	Outfit* assignOutfit(Outfit *);
-	Weapon* assignWeapon(Weapon *);
+	Outfit* assignOutfit(Outfit * outfitPtr);
+	Weapon* assignWeapon(Weapon * wpnPtr);
 
 	bool isDead();
 

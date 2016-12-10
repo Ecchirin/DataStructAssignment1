@@ -1,5 +1,5 @@
-#ifndef GAMEOBJECT_H
-#define GAMEOBJECT_H
+#ifndef ASSIGNMENT1_ROOT_GAMEOBJECT_H
+#define ASSIGNMENT1_ROOT_GAMEOBJECT_H
 
 #include <iostream>
 #include <string>
@@ -14,7 +14,7 @@ public:
 
 protected:
 	const std::string kName;
-	GameObject(const std::string&);
+	GameObject(const std::string& objName);
 
 private:
 	static int count_;

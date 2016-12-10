@@ -1,15 +1,15 @@
-#ifndef WEAPON_H
-#define WEAPON_H
+#ifndef ASSIGNMENT1_ROOT_WEAPON_H
+#define ASSIGNMENT1_ROOT_WEAPON_H
 
 #include "Item.h"
 
 class Weapon : public Item
 {
 public:
-	Weapon(const std::string&, const int&, const int&);
+	Weapon(const std::string& objName, const int& duraValue, const int& wpnDamage);
 	~Weapon();
 
-	void receiveDamage(const int & damage);
+	void receiveDamage(const int &damage);
 
 	const int getAttackDmg();
 

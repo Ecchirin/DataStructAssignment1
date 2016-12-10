@@ -1,15 +1,15 @@
-#ifndef OUTFIT_H
-#define OUTFIT_H
+#ifndef ASSIGNMENT1_ROOT_OUTFIT_H
+#define ASSIGNMENT1_ROOT_OUTFIT_H
 
 #include "Item.h"
 
 class Outfit : public Item
 {
 public:
-	Outfit(const std::string&, const int&, const int&);
+	Outfit(const std::string& objName, const int& duraValue, const int& specialValue);
 	~Outfit();
 
-	void receiveDamage(const int & damage);
+	void receiveDamage(const int &damage);
 
 	const int getSPECIAL();
 
