@@ -1,3 +1,5 @@
+* Yucchi : Sat Dec 10 18:59:07 2016 +0800 : Updated how the #define header names.
+* Yucchi : Sat Dec 10 18:50:48 2016 +0800 : Added log.
 * Yucchi : Sat Dec 10 18:26:52 2016 +0800 : Updated getSpecial, it now adds outfit special stats too; Updated getCurrentHealth, it now has a better checking of health; Updated recieveRadDamage, it now checks if health is more than max health and updates it correctly; Added checks for useStimpak and useRadAway, if user has 0 stimpak/radaway, user will not be able to heal.
 * Yucchi : Sat Dec 10 17:14:27 2016 +0800 : Removed cout debug lines from Outfit, Weapon and Item; Updated Dweller.cpp to let complieCheck delete the pointers instead, made receiveEquipmentDamage to check if it was pointing to anything before trying to call the function. Updated GameObject so the static variable is defined and initialized.
 * Yucchi : Sat Dec 10 16:48:30 2016 +0800 : Forgot to finish two functions; assignOutfit and assignWeapon. Both functions are now complete.
