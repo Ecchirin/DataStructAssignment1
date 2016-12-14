@@ -1,6 +1,6 @@
 #include "Item.h"
 
-Item::Item(const std::string& objName, const int& duraValue) : GameObject::GameObject(objName)
+Item::Item(const std::string& objName, const int& duraValue) : GameObject(objName)
 {
 	durability_ = duraValue;
 }

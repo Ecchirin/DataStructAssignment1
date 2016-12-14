@@ -1,6 +1,6 @@
 #include "Dweller.h"
 
-Dweller::Dweller(const std::string& dwellerName, const int& specialValue) : GameObject::GameObject(dwellerName)
+Dweller::Dweller(const std::string& dwellerName, const int& specialValue) : GameObject(dwellerName)
 {
 	position_.x = 0;	position_.y = 0;
 
